@@ -116,7 +116,7 @@ def main(stdscr, settings=False):
     elif settings[2] == 2: speed = 0.08
 
     stdscr.clear()
-    stdscr.addstr(9,13,'SNAKE',curses.A_BOLD)
+    stdscr.addstr(9,15,'SNAKE',curses.A_BOLD)
     stdscr.refresh()
     sleep(2)
     stdscr.clear()

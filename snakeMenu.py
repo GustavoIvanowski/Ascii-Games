@@ -4,25 +4,22 @@ def snakeMenu(stdscr):
     stdscr.clear()
     size = 1
     while True:
-        stdscr.addstr(7,11,'BOARD SIZE',curses.A_BOLD)
+        stdscr.addstr(5,13,'BOARD SIZE',curses.A_BOLD)
         if size == 0:
-            stdscr.addstr(9,6,'SMALL', curses.A_BOLD)
-            stdscr.addstr(9,13,'normal')
-            stdscr.addstr(9,21,'large')
-            stdscr.addstr(12,12, '<-   ->')
-            stdscr.addstr(13,12, 'a     d')
-            stdscr.addstr(15,8, 'ENTER TO CONFIRM')
+            stdscr.addstr(7,8,'SMALL', curses.A_BOLD)
+            stdscr.addstr(7,15,'normal')
+            stdscr.addstr(7,23,'large')
         elif size == 1:
-            stdscr.addstr(9,6,'small')
-            stdscr.addstr(9,13,'NORMAL', curses.A_BOLD)
-            stdscr.addstr(9,21,'large')
+            stdscr.addstr(7,8,'small')
+            stdscr.addstr(7,15,'NORMAL', curses.A_BOLD)
+            stdscr.addstr(7,23,'large')
         elif size == 2:
-            stdscr.addstr(9,6,'small')
-            stdscr.addstr(9,13,'normal')
-            stdscr.addstr(9,21,'LARGE', curses.A_BOLD)
-        stdscr.addstr(12,12, '<-   ->')
-        stdscr.addstr(13,12, 'a     d')
-        stdscr.addstr(15,8, 'ENTER TO CONFIRM')
+            stdscr.addstr(7,8,'small')
+            stdscr.addstr(7,15,'normal')
+            stdscr.addstr(7,23,'LARGE', curses.A_BOLD)
+        stdscr.addstr(10,14, '<-   ->')
+        stdscr.addstr(11,14, 'a     d')
+        stdscr.addstr(13,10, 'ENTER TO CONFIRM')
 
         stdscr.refresh()
         inp = stdscr.getkey()
@@ -40,16 +37,16 @@ def snakeMenu(stdscr):
     obstacles = False
 
     while True:
-        stdscr.addstr(7,12,'OBSTACLES',curses.A_BOLD)
+        stdscr.addstr(5,13,'OBSTACLES',curses.A_BOLD) # 7,12
         if obstacles:
-            stdscr.addstr(9,8,'off')
-            stdscr.addstr(9,21,'ON', curses.A_BOLD)
+            stdscr.addstr(7,9,'off')
+            stdscr.addstr(7,23,'ON', curses.A_BOLD)
         else:
-            stdscr.addstr(9,8,'OFF', curses.A_BOLD)
-            stdscr.addstr(9,21,'on')
-        stdscr.addstr(12,12, '<-   ->')
-        stdscr.addstr(13,12, 'a     d')
-        stdscr.addstr(15,8, 'ENTER TO CONFIRM')
+            stdscr.addstr(7,9,'OFF', curses.A_BOLD)
+            stdscr.addstr(7,23,'on')
+        stdscr.addstr(10,14, '<-   ->')
+        stdscr.addstr(11,14, 'a     d')
+        stdscr.addstr(13,10, 'ENTER TO CONFIRM')
 
         stdscr.refresh()
         inp = stdscr.getkey()
@@ -63,25 +60,22 @@ def snakeMenu(stdscr):
     speed = 1
 
     while True:
-        stdscr.addstr(7,13,'SPEED',curses.A_BOLD)
+        stdscr.addstr(5,15,'SPEED',curses.A_BOLD)
         if speed == 0:
-            stdscr.addstr(9,6,'SLOW', curses.A_BOLD)
-            stdscr.addstr(9,13,'normal')
-            stdscr.addstr(9,22,'fast')
-            stdscr.addstr(12,12, '<-   ->')
-            stdscr.addstr(13,12, 'a     d')
-            stdscr.addstr(15,8, 'ENTER TO CONFIRM')
+            stdscr.addstr(7,7,'SLOW', curses.A_BOLD)
+            stdscr.addstr(7,14,'normal')
+            stdscr.addstr(7,22,'fast')
         elif speed == 1:
-            stdscr.addstr(9,6,'slow')
-            stdscr.addstr(9,13,'NORMAL', curses.A_BOLD)
-            stdscr.addstr(9,21,'fast')
+            stdscr.addstr(7,7,'slow')
+            stdscr.addstr(7,14,'NORMAL', curses.A_BOLD)
+            stdscr.addstr(7,22,'fast')
         elif speed == 2:
-            stdscr.addstr(9,6,'slow')
-            stdscr.addstr(9,13,'normal')
-            stdscr.addstr(9,21,'FAST', curses.A_BOLD)
-        stdscr.addstr(12,12, '<-   ->')
-        stdscr.addstr(13,12, 'a     d')
-        stdscr.addstr(15,8, 'ENTER TO CONFIRM')
+            stdscr.addstr(7,7,'slow')
+            stdscr.addstr(7,14,'normal')
+            stdscr.addstr(7,22,'FAST', curses.A_BOLD)
+        stdscr.addstr(10,14, '<-   ->')
+        stdscr.addstr(11,14, 'a     d')
+        stdscr.addstr(13,10, 'ENTER TO CONFIRM')
 
         stdscr.refresh()
         inp = stdscr.getkey()
